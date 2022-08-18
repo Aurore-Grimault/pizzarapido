@@ -15,7 +15,6 @@
 		
 	}
 	
-
 	if ($action == "CREATE") {
 		createUser($id, $nom, $prenom, $adresse);
 

@@ -50,10 +50,8 @@
 
     // $user= $requete -> fetchAll();
 
-    // $sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) VALUES ('grimault', 'aurore', 'auroreg@gmail.com'";
-    // $conn = null;
-    // $requete= $db ->query($sql);
-
-
+    $sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) VALUES ('grimault', 'aurore', 'auroreg@gmail.com'";
+    $conn = null;
+    $requete= $db ->query($sql);
 
 ?>
