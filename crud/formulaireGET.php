@@ -4,6 +4,7 @@
 	$nom = $_GET["nom"];
 	$prenom = $_GET["prenom"];
 	$adresse = $_GET["adresse"];
+
 	echo 'Bonjour ' . $nom . '  -  '.$prenom. '!';
 
 	$servername = "localhost";
@@ -16,18 +17,17 @@
 	
 	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	    
-	    $sql = "INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `adresse`)
-	    VALUES ('', '$nom', '$prenom', '$adresse')";
+	    $sql = "INSERT INTO utilisateurs (`id`, `nom`, `prenom`, `adresse`)
+	    VALUES ('$id', '$nom', '$prenom', '$adresse')";
 	    
 	    $conn->exec($sql);
-	    echo "Vous êtes bien connectés";
-	    }
-	catch(PDOException $e)
-	    {
-	    echo $sql . "<br>" . $e->getMessage();
-	    }
 
-		$sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) VALUES ('grimault', 'aurore', 'auroreg@gmail.com'";
-$conn = null;
+	    echo "Vous êtes bien connectés";
+
+	} catch(PDOException $e){
+	    echo $sql . "<br>" . $e->getMessage();
+	}
+
+	$conn = null;
 
 ?>
