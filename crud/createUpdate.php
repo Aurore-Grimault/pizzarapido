@@ -19,8 +19,8 @@
 	if ($action == "CREATE") {
 		createUser($id, $nom, $prenom, $adresse);
 
-		echo "user cree <br>";
-		echo "<a href='./index.php'>Liste des utilisateurs</a>";
+		echo "utilisateur crée <br>";
+		echo "<a href='./public_html/index.html'>Liste des utilisateurs</a>";
 		
 	}
 	

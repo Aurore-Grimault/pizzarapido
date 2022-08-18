@@ -5,7 +5,7 @@
 		    $user = "user";
 			$pass = "mdp";
 			$pdo = new PDO('mysql:host=localhost;dbname=tuto_php', $user, $pass);
-			 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $pdo;
 			
 		} catch (PDOException $e) {
@@ -14,7 +14,6 @@
 		}
 	}
 
-	
 	// récupere tous les users
 	function getAllUsers() {
 		$con = getDatabaseConnexion();
@@ -24,11 +23,11 @@
 	}
 
 	// creer un user
-	function createUser($nom, $prenom, $age, $adresse) {
+	function createUser($nom, $prenom, $adresse) {
 		try {
 			$con = getDatabaseConnexion();
-			$sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) 
-					VALUES ('gri', 'aur', 'griaur@gmail.com')";
+			$sql = "INSERT INTO `utilisateurs` (`id`, `nom`, `prenom`, `adresse`) 
+					VALUES ('', '$nom', '$prenom', '$adresse')";
 	    	$con->exec($sql);
 		}
 	    catch(PDOException $e) {
@@ -80,13 +79,13 @@
 	//     }
 	// }
 
-	function getNewUser() {
-		$user['id'] = "";
-		$user['nom'] = "aur";
-		$user['prenom'] = "gri";
-		$user['adresse'] = "aurgri@gmail.com";
+	// function getNewUser() {
+	// 	$user['id'] = "";
+	// 	$user['nom'] = "";
+	// 	$user['prenom'] = "";
+	// 	$user['adresse'] = "";
 		
-	}
+	// }
 	
 
 
