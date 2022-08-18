@@ -37,16 +37,16 @@
 
 	//recupere un user
 
-	// function readUser($id) {
-	// 	$con = getDatabaseConnexion();
-	// 	$requete = "SELECT * from utilisateurs where id = '$id' ";
-	// 	$stmt = $con->query($requete);
-	// 	$row = $stmt->fetchAll();
-	// 	if (!empty($row)) {
-	// 		return $row[0];
-	// 	}
+	function readUser($id) {
+		$con = getDatabaseConnexion();
+		$requete = "SELECT * from utilisateurs where id = '$id' ";
+		$stmt = $con->query($requete);
+		$row = $stmt->fetchAll();
+		if (!empty($row)) {
+			return $row[0];
+		}
 		
-	// }
+	}
 
 	//met à jour le user
 

@@ -7,6 +7,16 @@
     <body>
     
 	<?php
+
+        class Pizza{
+            public function choisirPizza(){
+                echo "choisissez votre pizza";
+            }
+        }
+
+        $obj = new Pizza();
+        $obj->choisirPizza(); 
+
 		include './mesFunctionsSQL.php';
 		include './mesFunctionsTable.php';
 

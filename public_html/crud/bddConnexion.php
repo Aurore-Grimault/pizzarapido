@@ -15,7 +15,6 @@
         // $dbh = null;
 
         $conn = new PDO("mysql:host=$servername;dbname=tuto_php", $user, $pass);
-
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo 'Connexion réussie';
     }
@@ -50,8 +49,8 @@
 
     // $user= $requete -> fetchAll();
 
-    $sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) VALUES ('grimault', 'aurore', 'auroreg@gmail.com'";
-    $conn = null;
-    $requete= $db ->query($sql);
+    // $sql = "INSERT INTO `utilisateurs` (`nom`, `prenom`, `adresse`) VALUES ('grimault', 'aurore', 'auroreg@gmail.com'";
+    // $conn = null;
+    // $requete= $db ->query($sql);
 
 ?>

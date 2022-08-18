@@ -22,7 +22,7 @@
 	    
 	    $conn->exec($sql);
 
-	    echo "Vous êtes bien connectés";
+	    echo $_GET ('Vous êtes bien connectés');
 
 	} catch(PDOException $e){
 	    echo $sql . "<br>" . $e->getMessage();
