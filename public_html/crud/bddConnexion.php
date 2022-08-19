@@ -1,5 +1,5 @@
 <?php
-	define("DBHOST", "localhost");
+	  define("DBHOST", "localhost");
     define("DBUSER", "user");
     define("DBPASS", "mdp");
     define("DBNAME", "tuto_php");
@@ -17,7 +17,7 @@
         $conn = new PDO("mysql:host=$servername;dbname=tuto_php", $user, $pass);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo 'Connexion réussie';
-    }
+      }
     
     /*On capture les exceptions si une exception est lancée et on affiche
      *les informations relatives à celle-ci*/

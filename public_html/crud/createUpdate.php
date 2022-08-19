@@ -1,6 +1,6 @@
 <?php
-	include './mesFunctionsSQL.php';
-	include './mesFunctionsTable.php';
+	include './crud/mesFunctionsSQL.php';
+	include './crud/mesFunctionsTable.php';
 
 	$action = $_GET["action"];
 
@@ -19,7 +19,7 @@
 		createUser($id, $nom, $prenom, $adresse);
 
 		echo "utilisateur crée <br>";
-		echo "<a href='./public_html/index.html'>Liste des utilisateurs</a>";
+		echo "<a href='public_html/index.html'>Liste des utilisateurs</a>";
 		
 	}
 	
